@@ -5,7 +5,7 @@ import { signIn } from 'next-auth/react'
 
 const SignInButton = () => {
   return (
-    <button onClick={() => signIn('github',{ callbackUrl: "http://localhost:3000"})} className="cursor-pointer">
+    <button onClick={() => signIn('github',{ callbackUrl: "/"})} className="cursor-pointer">
       Login
     </button>
   )
