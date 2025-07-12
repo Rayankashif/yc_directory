@@ -4,12 +4,13 @@
 
 import * as Sentry from "@sentry/nextjs";
 
-Sentry.init({
+Sentry.init({ 
   dsn: "https://f823858c67aca3d1cc548cef96e68128@o4509642881368064.ingest.us.sentry.io/4509642882940928",
 
   // Add optional integrations for additional features
   integrations: [
     Sentry.replayIntegration(),
+    Sentry.feedbackIntegration({ colorScheme: "system" }),
   ],
 
   // Define how likely traces are sampled. Adjust this value in production, or use tracesSampler for greater control.
